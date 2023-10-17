@@ -3,6 +3,7 @@ from fastapi import FastAPI, HTTPException, Body
 from pydantic import BaseModel
 import tiktoken
 import openai
+import uvicorn
 
 
 app = FastAPI()
@@ -86,5 +87,4 @@ def ask(data: RequestModel = Body(...)):
     }
     
 if __name__ == "__main__":
-    import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
