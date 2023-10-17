@@ -1,10 +1,13 @@
-from fastapi import FastAPI
-from fastapi import FastAPI, HTTPException, Body
+from fastapi import FastAPI, Body
 from pydantic import BaseModel
-import tiktoken
-import openai
-import uvicorn
+from dotenv import load_dotenv
+import tiktoken, openai, uvicorn, os, pathlib
 
+env_path = pathlib.Path('..') / '.env'
+load_dotenv(dotenv_path=env_path)
+
+openai_model = os.getenv('OPENAI_MODEL')
+openai_api_key = os.getenv('OPENAI_API_KEY')
 
 app = FastAPI()
 
@@ -41,9 +44,9 @@ def num_tokens_from_string(string: str) -> int:
     return num_tokens
 
 def ask_openai_model(prompt: str)-> str:
-    openai.api_key = "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"
+    openai.api_key = openai_api_key
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model=openai_model,
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": prompt}
@@ -85,6 +88,3 @@ def ask(data: RequestModel = Body(...)):
         "total_token_used_to_answer_question":total_token_used_to_answer_question,
         "total_token_in_context":total_token_in_context
     }
-    
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)

@@ -1,6 +1,15 @@
-import streamlit as st
-import requests, io, uuid
 from pypdf import PdfReader
+from dotenv import load_dotenv
+import streamlit as st
+import requests, io, uuid, pathlib, dotenv, os
+
+
+env_path = pathlib.Path('..') / '.env'
+load_dotenv(dotenv_path=env_path)
+
+fastapi_host = os.getenv('FASTAPI_HOST')
+fastapi_port = os.getenv('FASTAPI_PORT')
+
 
 def get_pdf_content_from_link (link : str) -> str:
     file_response = requests.get(file_link)
@@ -39,7 +48,7 @@ def extract_pdf_content_using_nougat(content : str, nougat_Server : str) -> (str
     return extracted_data, num_words
     
 def get_answer_from_openai(context : str, user_query : str)->(str, int, int):
-    url = "http://127.0.0.1:8000/ask"
+    url = fastapi_host + ":" + fastapi_port + "/ask"
     headers = {
         "Content-Type": "application/json"
     }
