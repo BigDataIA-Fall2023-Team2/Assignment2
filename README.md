@@ -22,8 +22,7 @@ Google Collab Notebook link -
 Python | Streamlit | Google Collab | Nougat | Railway | Fast API
 
 ### Architecture diagram ###
-![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment2/assets/131703516/13123366-c64b-46d5-8d31-08ce74fa3dca)
-
+![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment2/assets/131703516/127ca5a6-520a-4730-8263-0c5931941ae3)
 
 ### Project Flow
 The user will upload the pdf in our streamlit application. The user has to then open the mentioned google colab notebook and paste the output URL which is generated in the colab notebook in the streamlit app. The colab notebook will extract the text from pdf and pass to streamlit application. Now, the extracted text and the question asked by user is passed to chatgpt api but it is not passed directly. It will first go through a fast api service that has been deployed on railway. This interaction will happen between railway and chatgpt.
@@ -37,7 +36,7 @@ The user will upload the pdf in our streamlit application. The user has to then 
 | Name                            | Contribution                              |  
 | ------------------------------- | ------------------------------------------|
 | Chinmay Gandi                   | Embeddings, demo replication in ipynb     |
-| Dhawal Negi, Shardul Chavan     | Fast API, Railway, Streamlit              |
+| Dhawal Negi                     | Fast API, Railway, Streamlit              |
 | Shardul Chavan                  | Model training, demo replication in ipynb | 
 
 
