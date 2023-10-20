@@ -30,7 +30,7 @@ The application allows users to upload a file or provide a link, after which the
 
 ### Repository Structure
 
-![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment2/assets/131703516/1e28b4ca-3870-497b-8180-3c665a747751)
+![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment2/assets/131703516/b4ac38d3-700a-418d-9991-1b6069211734)
 
 ### Contributions
 
