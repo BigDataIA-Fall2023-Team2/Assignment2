@@ -22,14 +22,15 @@ Google Collab Notebook link - https://github.com/BigDataIA-Fall2023-Team2/Assign
 Python | Streamlit | Google Collab | Nougat | Railway | Fast API
 
 ### Architecture diagram ###
-![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment2/assets/131703516/127ca5a6-520a-4730-8263-0c5931941ae3)
+
+![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment2/assets/131703516/16879c83-6b95-4ff9-8c19-56cffb68a2fb)
 
 ### Project Flow
 The application allows users to upload a file or provide a link, after which they can choose between 'Nougat' and 'PyPDF' for processing. If 'Nougat' is selected, the user must provide a Google Collab localtunnel link. Streamlit then parses the PDF using the chosen method (Nougat or PyPDF). Users can subsequently pose questions about the extracted text. Upon receiving a question, Streamlit communicates with FastAPI, sending both the text and the query. FastAPI then breaks down the data into smaller chunks and sequentially queries OpenAI for an answer from each chunk until a satisfactory answer is located.
 
 ### Repository Structure
 
-![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment2/assets/131703516/c73c2c95-4355-47c0-befe-1e3e91313fc9)
+![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment2/assets/131703516/1e28b4ca-3870-497b-8180-3c665a747751)
 
 ### Contributions
 
