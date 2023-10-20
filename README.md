@@ -16,7 +16,7 @@ Fast API hosted on Railway link - https://team2assignment2.up.railway.app/docs
 
 Google Codelab link - https://codelabs-preview.appspot.com/?file_id=1OEvGnQV7FttHE2BCg1mvAkjxIKbMMB9NSFUwHtGoqcA#0
 
-Google Collab Notebook link - 
+Google Collab Notebook link - https://github.com/BigDataIA-Fall2023-Team2/Assignment2/blob/main/Assignment_2_PDF_QA_Cookbook.ipynb
 
 ### Tech Stack
 Python | Streamlit | Google Collab | Nougat | Railway | Fast API
