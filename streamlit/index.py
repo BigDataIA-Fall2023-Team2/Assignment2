@@ -69,9 +69,9 @@ def get_answer_from_openai(context : str, user_query : str)->(str, int, int):
     }
     response = requests.post(url, json=data, headers=headers)
     if response.status_code == 200:
-        return response.json()["result"], response.json()["total_token_used_to_answer_question"], response.json()["total_token_in_context"], response.status_code
+        return response.json()["result"], response.json()["total_token_used_to_answer_question"], response.json()["total_token_in_context"]
     else:
-        return f"Error {response.status_code}: {response.text}" , 0, response.status_code
+        return f"Error {response.status_code}: {response.text}" , 0, 0
 
 if 'pdf_content' not in st.session_state:
     st.session_state.pdf_content = ''
@@ -114,12 +114,9 @@ if st.button("Submit Pdf"):
                 st.write("Number of words in the PDF are: " + str(st.session_state.num_words_in_pdf))
             else:
                 if collab_link != "":
-                    st.session_state.pdf_content, st.session_state.num_words_in_pdf, nougat_response_code = extract_pdf_content_using_nougat(file_content, collab_link)
-                    if nougat_response_code == 200:
-                        st.write("The pdf has been successfully downloaded and parsed using " + library_option)
-                        st.write("Number of words in the PDF are: " + str(st.session_state.num_words_in_pdf))
-                    else:
-                        st.error("Error in parsing the pdf using nougat. Please verify your locaal tunnel and nougat instance")
+                    st.session_state.pdf_content, st.session_state.num_words_in_pdf = extract_pdf_content_using_nougat(file_content, collab_link)
+                    st.write("The pdf has been successfully downloaded and parsed using " + library_option)
+                    st.write("Number of words in the PDF are: " + str(st.session_state.num_words_in_pdf))
                 else:
                     st.error("Please provide a localtunnel link to google collab running nougat_api.")
 
