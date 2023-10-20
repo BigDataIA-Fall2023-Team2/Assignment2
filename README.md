@@ -14,7 +14,7 @@ Fast API hosted on Railway link - https://team2assignment2.up.railway.app/docs
 
 ### Project Resources
 
-Google Codelab link - 
+Google Codelab link - https://codelabs-preview.appspot.com/?file_id=1OEvGnQV7FttHE2BCg1mvAkjxIKbMMB9NSFUwHtGoqcA#0
 
 ### Tech Stack
 Python | Streamlit | Google Collab | Nougat | Railway | Fast API
