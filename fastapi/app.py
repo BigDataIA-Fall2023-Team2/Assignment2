@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Body
 from pydantic import BaseModel
 from dotenv import load_dotenv
-import tiktoken, openai, uvicorn, os, pathlib
+import tiktoken, openai, os, pathlib
 
 env_path = pathlib.Path('..') / '.env'
 load_dotenv(dotenv_path=env_path)
