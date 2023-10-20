@@ -2,9 +2,9 @@
 
 ### Project Descrition 
 
-The project is an extension of the previous project 1 (https://github.com/BigDataIA-Fall2023-Team2/Assignment1/blob/main/part1/Readme.md). In this project, the text that is extracted from pdf using project 1 is used for summarization/question answering. The user will ask respective questions related to the pdf in the application, and the app will be respond to the questions. We will be using openAI APIs to fetch result from the extracted text. 
+This project builds upon the foundation laid by Project 1(https://github.com/BigDataIA-Fall2023-Team2/Assignment1/blob/main/part1/Readme.md), leveraging the text extracted from PDF documents to facilitate summarization and question answering. Within our application, users can pose questions pertaining to the content of the PDF, to which the app will provide insightful responses. Utilizing OpenAI APIs, we extract and analyze the text to generate accurate answers.
 
-The most important feature of our application is that we will be sending data in chunks so that if openAI is able to find an answer to a question in a particular chunk then the rest of the text in the pdf would not be required for further analysis. 
+A distinctive feature of our application is the implementation of a chunk-based data processing approach. By segmenting the text data into manageable chunks, we enhance the efficiency of the query process. If an answer is found within a particular chunk, there's no need to process the remaining text, thereby optimizing resource utilization and expediting response times. Through this focused, chunk-driven methodology, we aim to deliver a robust and responsive user experience that makes interacting with textual data both intuitive and insightful. 
 
 ### Application and Documentation Link
 
@@ -25,7 +25,7 @@ Python | Streamlit | Google Collab | Nougat | Railway | Fast API
 ![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment2/assets/131703516/127ca5a6-520a-4730-8263-0c5931941ae3)
 
 ### Project Flow
-The user will upload the pdf in our streamlit application. The user has to then open the mentioned google colab notebook and paste the output URL which is generated in the colab notebook in the streamlit app. The colab notebook will extract the text from pdf and pass to streamlit application. Now, the extracted text and the question asked by user is passed to chatgpt api but it is not passed directly. It will first go through a fast api service that has been deployed on railway. This interaction will happen between railway and chatgpt.
+The application allows users to upload a file or provide a link, after which they can choose between 'Nougat' and 'PyPDF' for processing. If 'Nougat' is selected, the user must provide a Google Collab localtunnel link. Streamlit then parses the PDF using the chosen method (Nougat or PyPDF). Users can subsequently pose questions about the extracted text. Upon receiving a question, Streamlit communicates with FastAPI, sending both the text and the query. FastAPI then breaks down the data into smaller chunks and sequentially queries OpenAI for an answer from each chunk until a satisfactory answer is located.
 
 ### Repository Structure
 
@@ -33,11 +33,11 @@ The user will upload the pdf in our streamlit application. The user has to then 
 
 ### Contributions
 
-| Name                            | Contribution                              |  
-| ------------------------------- | ------------------------------------------|
-| Chinmay Gandi                   | Embeddings, demo replication in ipynb     |
-| Dhawal Negi                     | Fast API, Railway, Streamlit              |
-| Shardul Chavan                  | Model training, demo replication in ipynb | 
+| Name                            | Contribution                               |  
+| ------------------------------- | -------------------------------------------|
+| Chinmay Gandi                   | Embeddings, demo replication in ipynb      |
+| Dhawal Negi                     | Fast API, Railway, Streamlit, Text Chunking|
+| Shardul Chavan                  | Fine Tuning,  demo replication in ipynb    | 
 
 
 ### Additional Notes
