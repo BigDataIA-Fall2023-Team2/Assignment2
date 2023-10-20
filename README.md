@@ -20,7 +20,8 @@ Google Codelab link -
 Python | Streamlit | Google Collab | Nougat | Railway | Fast API
 
 ### Architecture diagram ###
-![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment2/assets/131703516/f6f34043-b073-4aea-9950-eb25e35df4bf)
+![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment2/assets/131703516/13123366-c64b-46d5-8d31-08ce74fa3dca)
+
 
 ### Project Flow
 The user will upload the pdf in our streamlit application. The user has to then open the mentioned google colab notebook and paste the output URL which is generated in the colab notebook in the streamlit app. The colab notebook will extract the text from pdf and pass to streamlit application. Now, the extracted text and the question asked by user is passed to chatgpt api but it is not passed directly. It will first go through a fast api service that has been deployed on railway. This interaction will happen between railway and chatgpt.
