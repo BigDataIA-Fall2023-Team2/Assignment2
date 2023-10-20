@@ -76,7 +76,7 @@ def get_answer_from_openai(context : str, user_query : str)->(str, int, int):
 if 'pdf_content' not in st.session_state:
     st.session_state.pdf_content = ''
     
-st.title("")
+st.title("Knowledge Base Interaction Application and Question Answering")
 input_type_option = st.selectbox("How would you like to provide the form to summarize", ('Link', 'Upload a PDF'))
 if input_type_option == 'Link':
     file_link = st.text_input("Enter the link to any Securities and Exchange commision form.")
