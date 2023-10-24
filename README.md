@@ -18,6 +18,7 @@ Google Codelab link - https://codelabs-preview.appspot.com/?file_id=1OEvGnQV7Ftt
 
 Google Collab Notebook link - https://github.com/BigDataIA-Fall2023-Team2/Assignment2/blob/main/Assignment_2_PDF_QA_Cookbook.ipynb
 
+Project Demo - https://www.youtube.com/watch?v=BtnFUVyTGwo
 ### Tech Stack
 Python | Streamlit | Google Collab | Nougat | Railway | Fast API
 
